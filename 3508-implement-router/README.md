@@ -15,3 +15,7 @@ However, the initial implementation resulted in a *Time Limit Exceeded* error on
 I stumbled across the datatype `deque`, as FIFO operations are more efficient there than repeatedly removing the first element of a list. While this improved removal performance, `deque` performs poorly when accessing arbitrary indices, which slows down the bisection.
 
 In the end, I ended up with a `deque` to keep track of all the packets, a `set` to check duplicate packages efficiently and a `dict` where each key is a destination that points to a list of timestamps and a *start-index* that changes the start of the list, rather than removing elements from the list itself. So we can keep the time stamps as a list for efficient bisection, but do not have to remove elements from the front.
+
+## Submission Result
+
+![Submission Result](submission.png "Submission Result")
